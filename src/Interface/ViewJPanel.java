@@ -5,6 +5,7 @@
  */
 package Interface;
 import Product.Car;
+import java.awt.Dimension;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
@@ -23,18 +24,59 @@ public class ViewJPanel extends javax.swing.JPanel {
     }
     
     private void displayProduct(Car car){
-        String productName = car.getName();
-        nameTextField.setText(productName);
+        String carName = car.getName();
+        nameTextField.setText(carName);
         
-        String productPrice = car.getPrice();
-        priceTextField.setText(productPrice);
+        String carPrice = car.getPrice();
+        priceTextField.setText(carPrice);
         
-        String productAvailNum = car.getAvailNum();
-        availNumberTextField.setText(productAvailNum);
+        String carSerNum = car.getSerialNum();
+        serNumberTextField.setText(carSerNum);
         
-        String productDesc = car.getDescription();
-        descTextField.setText(productDesc);
+        String carDesc = car.getDescription();
+        descTextField.setText(carDesc);
         
+        String carColor = car.getColor();
+        colorTextField.setText(carColor);
+        
+        String carDrivetrain = car.getDrivetrain();
+        drivetrainTextField.setText(carDrivetrain);
+        
+        String carEngineDisplacement = car.getEngineDisplacement();
+        engineDisplacementTextField.setText(carEngineDisplacement);
+        
+        String carFuelCapacity = car.getFuelCapacity();
+        fuelCapacityTextField.setText(carFuelCapacity);
+        
+        String carFuelType = car.getFuelType();
+        fuelTypeTextField.setText(carFuelType);
+        
+        String carHeight = car.getHeight();
+        heightTextField.setText(carHeight);
+        
+        String carHorsePower = car.getHorsePower();
+        horsepowerTextField.setText(carHorsePower);
+        
+        String carLength = car.getLength();
+        lengthTextField.setText(carLength);
+        
+        String carModel = car.getModel();
+        modelTextField.setText(carModel);
+        
+        String carNumOfCylinders = car.getNumOfCylinders();
+        numOfCylindersTextField.setText(carNumOfCylinders);
+        
+        String carTorque = car.getTorque();
+        torqueTextField.setText(carTorque);
+        
+        String carWeight = car.getWeight();
+        weightTextField.setText(carWeight);
+        
+        String carWheelbase = car.getWheelBase();
+        wheelbaseTextField.setText(carWheelbase);
+        
+        String carWidth = car.getWidth();
+        widthTextField.setText(carWidth);
         
         String productImage = car.getImageAbsolutePath();
         if(productImage != null && productImage.length() > 0){
@@ -44,8 +86,6 @@ public class ViewJPanel extends javax.swing.JPanel {
             icon = new ImageIcon(resizeImage);
             imageLabel.setIcon(icon);
             imageLabel.setText("");
-        }else{
-            imageLabel.setText("NoImageUpload");
         }
     }
 
@@ -58,6 +98,32 @@ public class ViewJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        colorTextField = new javax.swing.JTextField();
+        modelTextField = new javax.swing.JTextField();
+        numOfCylindersTextField = new javax.swing.JTextField();
+        wheelbaseTextField = new javax.swing.JTextField();
+        widthTextField = new javax.swing.JTextField();
+        lengthTextField = new javax.swing.JTextField();
+        serNumberTextField = new javax.swing.JTextField();
+        heightTextField = new javax.swing.JTextField();
+        weightTextField = new javax.swing.JTextField();
+        engineDisplacementTextField = new javax.swing.JTextField();
+        fuelTypeTextField = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        horsepowerTextField = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        torqueTextField = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -65,15 +131,116 @@ public class ViewJPanel extends javax.swing.JPanel {
         priceTextField = new javax.swing.JTextField();
         nameTextField = new javax.swing.JTextField();
         descTextField = new javax.swing.JTextField();
-        availNumberTextField = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        drivetrainTextField = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        fuelCapacityTextField = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
         imageLabel = new javax.swing.JLabel();
+
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel1.setText("View");
+
+        jLabel14.setText("Engine Displacement:");
+
+        jLabel15.setText("Fuel Type:");
+
+        jLabel16.setText("Horsepower：");
+
+        jLabel17.setText("Torque：");
+
+        colorTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colorTextFieldActionPerformed(evt);
+            }
+        });
+
+        modelTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modelTextFieldActionPerformed(evt);
+            }
+        });
+
+        numOfCylindersTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numOfCylindersTextFieldActionPerformed(evt);
+            }
+        });
+
+        wheelbaseTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wheelbaseTextFieldActionPerformed(evt);
+            }
+        });
+
+        widthTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                widthTextFieldActionPerformed(evt);
+            }
+        });
+
+        lengthTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lengthTextFieldActionPerformed(evt);
+            }
+        });
+
+        heightTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                heightTextFieldActionPerformed(evt);
+            }
+        });
+
+        weightTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                weightTextFieldActionPerformed(evt);
+            }
+        });
+
+        engineDisplacementTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                engineDisplacementTextFieldActionPerformed(evt);
+            }
+        });
+
+        fuelTypeTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fuelTypeTextFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("Color:");
+
+        horsepowerTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                horsepowerTextFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Model:");
+
+        torqueTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                torqueTextFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("Number of Cylinders：");
+
+        jLabel18.setText("Drivetrain：");
+
+        jLabel9.setText("Wheelbase：");
+
+        jLabel19.setText("Fuel Capacity：");
+
+        jLabel10.setText("Length:");
+
+        jLabel11.setText("Width:");
 
         jLabel2.setText("Name:");
 
         jLabel3.setText("Price:");
 
-        jLabel4.setText("Availbity Number:");
+        jLabel4.setText("Serial Number:");
 
         jLabel5.setText("Description:");
 
@@ -89,15 +256,15 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
-        jLabel1.setText("View");
+        jLabel13.setText("Height:");
 
-        imageLabel.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        jLabel20.setText("Weight:");
+
+        imageLabel.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         imageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imageLabel.setText("Image");
-        imageLabel.setToolTipText("");
+        imageLabel.setText("NoImageUpload");
         imageLabel.setBorder(new javax.swing.border.MatteBorder(null));
-        imageLabel.setBounds(new java.awt.Rectangle(0, 0, 100, 100));
+        imageLabel.setBounds(new java.awt.Rectangle(0, 0, 300, 157));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -106,56 +273,209 @@ public class ViewJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(256, 256, 256)
+                        .addGap(424, 424, 424)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(nameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
-                            .addComponent(priceTextField))
-                        .addGap(43, 43, 43)
-                        .addComponent(imageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel2)
+                                            .addComponent(jLabel3))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(priceTextField)
+                                            .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(serNumberTextField))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(modelTextField))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel8)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(numOfCylindersTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel5)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(descTextField))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(colorTextField))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel9)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(wheelbaseTextField))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(103, 103, 103)
+                                        .addComponent(drivetrainTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(111, 111, 111)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel17)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(torqueTextField))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel16)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(horsepowerTextField))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel15)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(fuelTypeTextField))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel14)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(engineDisplacementTextField))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel13)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(heightTextField))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel20)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(weightTextField))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel11)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(widthTextField))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel10)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lengthTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel19)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(fuelCapacityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel18)))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(descTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(availNumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(264, Short.MAX_VALUE))
+                        .addGap(297, 297, 297)
+                        .addComponent(imageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(imageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(imageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
-                    .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel10)
+                    .addComponent(lengthTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(priceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel11)
+                    .addComponent(widthTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(descTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(serNumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13)
+                    .addComponent(heightTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(availNumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(145, Short.MAX_VALUE))
+                    .addComponent(descTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20)
+                    .addComponent(weightTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel14)
+                    .addComponent(engineDisplacementTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(colorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel15)
+                    .addComponent(modelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fuelTypeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel16)
+                    .addComponent(numOfCylindersTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(horsepowerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(wheelbaseTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel17)
+                            .addComponent(torqueTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel19)
+                    .addComponent(drivetrainTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fuelCapacityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void colorTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colorTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_colorTextFieldActionPerformed
+
+    private void modelTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modelTextFieldActionPerformed
+
+    private void numOfCylindersTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numOfCylindersTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numOfCylindersTextFieldActionPerformed
+
+    private void wheelbaseTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wheelbaseTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_wheelbaseTextFieldActionPerformed
+
+    private void widthTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_widthTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_widthTextFieldActionPerformed
+
+    private void lengthTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lengthTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lengthTextFieldActionPerformed
+
+    private void heightTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_heightTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_heightTextFieldActionPerformed
+
+    private void weightTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_weightTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_weightTextFieldActionPerformed
+
+    private void engineDisplacementTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_engineDisplacementTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_engineDisplacementTextFieldActionPerformed
+
+    private void fuelTypeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fuelTypeTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fuelTypeTextFieldActionPerformed
+
+    private void horsepowerTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horsepowerTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_horsepowerTextFieldActionPerformed
+
+    private void torqueTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_torqueTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_torqueTextFieldActionPerformed
 
     private void priceTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priceTextFieldActionPerformed
         // TODO add your handling code here:
@@ -167,15 +487,43 @@ public class ViewJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField availNumberTextField;
+    private javax.swing.JTextField colorTextField;
     private javax.swing.JTextField descTextField;
+    private javax.swing.JTextField drivetrainTextField;
+    private javax.swing.JTextField engineDisplacementTextField;
+    private javax.swing.JTextField fuelCapacityTextField;
+    private javax.swing.JTextField fuelTypeTextField;
+    private javax.swing.JTextField heightTextField;
+    private javax.swing.JTextField horsepowerTextField;
     private javax.swing.JLabel imageLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField lengthTextField;
+    private javax.swing.JTextField modelTextField;
     private javax.swing.JTextField nameTextField;
+    private javax.swing.JTextField numOfCylindersTextField;
     private javax.swing.JTextField priceTextField;
+    private javax.swing.JTextField serNumberTextField;
+    private javax.swing.JTextField torqueTextField;
+    private javax.swing.JTextField weightTextField;
+    private javax.swing.JTextField wheelbaseTextField;
+    private javax.swing.JTextField widthTextField;
     // End of variables declaration//GEN-END:variables
 }

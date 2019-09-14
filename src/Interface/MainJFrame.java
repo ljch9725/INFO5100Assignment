@@ -55,21 +55,21 @@ public class MainJFrame extends javax.swing.JFrame {
         controlPanel.setLayout(controlPanelLayout);
         controlPanelLayout.setHorizontalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
-                .addContainerGap(10, Short.MAX_VALUE)
+            .addGroup(controlPanelLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(viewBtn)
-                    .addComponent(createBtn))
-                .addContainerGap())
+                    .addComponent(createBtn)
+                    .addComponent(viewBtn))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(67, 67, 67)
+                .addContainerGap(288, Short.MAX_VALUE)
                 .addComponent(createBtn)
-                .addGap(44, 44, 44)
+                .addGap(75, 75, 75)
                 .addComponent(viewBtn)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addGap(284, 284, 284))
         );
 
         splitPanel.setLeftComponent(controlPanel);
@@ -78,11 +78,11 @@ public class MainJFrame extends javax.swing.JFrame {
         displayJPanel.setLayout(displayJPanelLayout);
         displayJPanelLayout.setHorizontalGroup(
             displayJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 287, Short.MAX_VALUE)
+            .addGap(0, 1038, Short.MAX_VALUE)
         );
         displayJPanelLayout.setVerticalGroup(
             displayJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
+            .addGap(0, 705, Short.MAX_VALUE)
         );
 
         splitPanel.setRightComponent(displayJPanel);
